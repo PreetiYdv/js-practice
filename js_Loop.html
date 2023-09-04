@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOP</title>
+</head>
+
+<body>
+
+    <script>
+
+        // ======= for loop ========== //
+        // const days = ["sun ", "mon ", "tue ", "wed ", "thu ", "fri ", "sat ", "sun", "hello"]
+        // let week = "";
+        // for (let i = days.length - 1; i < days.length; i++) {
+        //     week += days[i]
+        // }
+        // console.log(days[days.length - 1]);
+        // const num = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13]
+        // const newArr = num.map(myFunction)
+        // function myFunction(num) {
+        //     // return (num / 2) % 1;
+        //     if ((num / 2) % 1 == 0) {
+        //         console.log("")
+        //     }
+        //     else {
+        //         console.log(num);
+        //     }
+        // }
+
+        // console.log(newArr)
+        // function oddValues() {
+        //     if (newArr == 0) {
+        //         console.log(num)
+        //     }
+        //     else {
+        //         console.log("jlkl");
+        //     }
+        // }
+        // oddValues();
+
+        // const n = 100;
+
+        // for (let i = n; i >= 0; i--) {
+        //     console.log(i);
+        // }
+
+        //STEP1:  i=1 (value assigned (from where it starts))
+        //STEP2: i <= n (condition (everytime after step 1 runs it check the value and make sure if condition is met or not , if condition is true the code run and if it's not it terminates the code)
+        // STEP3: i++ (for increment (if above situation is satisfied than increase the value of i by 1))
+
+        // //  Do While loop
+        // let text = "";
+        // let i = 0;
+        // do {
+        //     text += i;
+        //     i++
+        // }
+        // while (i <= 5);
+        // console.log(text);
+
+        // // while loop
+        // var num = 0;
+        // var x = prompt()
+        // while (num < x) {
+        //     num++;
+        //     console.log(num);
+        // }
+
+        // add
+        //   let n = 0;
+        //       let num=""
+        //     for (let i = n; i <= 10; i++) {  
+        //         console.log(n+= i );
+        //     }
+
+        let rows = 20;
+
+        // pattern variable carries the final pattern in string format
+        let pattern = "";
+
+        // outer loop runs for `rows` no. of times
+        for (let n = rows; n >= 1; n--) {
+            // Inner Loop - I -> for the spaces
+            
+            for (let space = rows-n; space > 1; space--) {
+                pattern += " ";
+            }
+            // Inner Loop - II -> for the numbers
+            for (let num = 1; num <= 2 * n - 1; num++) {
+                pattern += "*";
+            }
+
+            pattern += "\n";
+        }
+        console.log(pattern);
+
+    </script>
+</body>
+
+</html>

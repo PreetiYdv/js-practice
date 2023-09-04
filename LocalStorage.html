@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //     localStorage.setItem("name", "preeti");
+        //    document.write( localStorage.getItem("name"));
+
+        //  let todos = [
+        //         "Go to gym",
+        //         "Studying for 2 hours",
+        //         "Chilling out with friends",
+        //         "Checking out GeeksforGeeks"
+        //     ]
+        //     localStorage.setItem("todos", JSON.stringify(todos))
+        //     document.write(localStorage.getItem("todos"))
+
+
+        // an object
+        const John = {
+            name: "John Doe",
+            age: 23,
+        };
+
+        // convert object to JSON string
+        // using JSON.stringify()
+        const jsonObj = JSON.stringify(John);
+        console.log(jsonObj);
+        // save to localStorage
+        localStorage.setItem("John", jsonObj);
+
+        // get the string
+        // from localStorage
+        const str = localStorage.getItem("John");
+        console.log(str);
+
+        // convert string to valid object
+        const parsedObj = JSON.parse(str);
+
+        console.log(parsedObj.age);
+    </script>
+</body>
+
+</html>
